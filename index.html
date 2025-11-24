@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profit Tracker</title>
-  <link rel="manifest" href="manifest.json">
-  <script>
-    // Redirect ke WebApp Google
-    window.location.href = "https://script.google.com/macros/s/AKfycby2OX0xbPi-e-3Xm4ez5FhSNC-9g3L_KnAnX3pQfbedcbwi_ao--JHEdImRRptMlH6v/exec";
-  </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profit Tracker</title>
+<link rel="manifest" href="manifest.json">
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log('Service Worker Registered'));
+}
+</script>
+<style>
+body { display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; }
+button { padding:1rem 2rem; font-size:1.2rem; cursor:pointer; }
+</style>
 </head>
 <body>
-  <p>Loading WebApp...</p>
+<h1>Profit Tracker</h1>
+<p>Install app ini dan buka WebApp lo</p>
+<button onclick="window.location.href='https://script.google.com/macros/s/AKfycby2OX0xbPi-e-3Xm4ez5FhSNC-9g3L_KnAnX3pQfbedcbwi_ao--JHEdImRRptMlH6v/exec'">Buka WebApp</button>
 </body>
 </html>
